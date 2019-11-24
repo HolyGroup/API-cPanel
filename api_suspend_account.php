@@ -1,10 +1,6 @@
 <?php
 
-
-
 $newUser = $utilisateur;
-
-
 
 ?>
 
@@ -12,23 +8,19 @@ $newUser = $utilisateur;
 
 // Change this!!!
 
-$server_ip = 'srv02.dedigo.fr';
+$server_ip = '0.0.0.0';
 
 function CpanelRequest($query,$ip=false) {
 
     /**
-
      *   Change These!!!!
-
      */
 
-    $whm_user = 'wmeesdgu';
+    $whm_user = 'USER';
 
-    $whm_passwd = 'gds5vg1d5fg185df1g581df85g1df';
+    $whm_passwd = 'PASSWORD';
 
-    
-
-	if($ip){
+    if($ip){
 
 		$query = 'https://'.$ip.':2087'.$query;
 
@@ -78,10 +70,7 @@ $qry = '/json-api/suspendacct?user='.$newUser.'&reason=Expiration';
 
     $result =  CpanelRequest($qry,$server_ip);
 
-
-
 if($result){
-
 
 
 $test = $result;
