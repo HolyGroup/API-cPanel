@@ -1,19 +1,9 @@
 
-
-
-
-
-
 <?php 
 
 // Change this!!!
 
-
-
-$server_ip = 'srv02.dedigo.fr';
-
-
-
+$server_ip = '0.0.0.0';
 
 function CpanelRequest($query,$ip=false,$port=false) {
 
@@ -23,12 +13,10 @@ function CpanelRequest($query,$ip=false,$port=false) {
 
      */
 
-    $whm_user = 'wmeesdgu';
+    $whm_user = 'USER';
+    $whm_passwd = 'PASSWORD';
 
-    $whm_passwd = 'gds5vg1d5fg185df1g581df85g1df';
-
-    
-
+  
     if($ip){
 
         $query = 'https://'.$ip.':'.$port.''.$query;
@@ -82,8 +70,6 @@ function CpanelRequest($query,$ip=false,$port=false) {
 }
 
 $qry = '/json-api/listaccts?api.version=1&search='.$utilisateur.'&searchtype=user';
-
-
 
 $result =  CpanelRequest($qry,$server_ip,2087);
 
