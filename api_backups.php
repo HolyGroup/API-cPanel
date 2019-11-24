@@ -6,7 +6,7 @@ $cpanel_password = $password;
 
 $host = $domaine;
 
-$server_ip = 'srv02.dedigo.fr';
+$server_ip = '0.0.0.0';
 
 function CpanelRequest($user,$password,$hosts,$query,$ip=false) {
     
