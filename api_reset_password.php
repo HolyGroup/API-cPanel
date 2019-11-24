@@ -1,19 +1,19 @@
 <?php
 
-$newPass = "P@SS-OH-".rand(1, 99999);
+$newPass = "PASSWORD-".rand(1, 99999);
 $user = $utilisateur;
 
 ?>
 <?php 
 
-$server_ip = 'srv02.dedigo.fr';
+$server_ip = '0.0.0.0';
 
 function CpanelRequest($query,$ip=false) {
     /**
      *   Change These!!!!
      */
-    $whm_user = 'wmeesdgu';
-    $whm_passwd = 'gds5vg1d5fg185df1g581df85g1df';
+    $whm_user = 'USER';
+    $whm_passwd = 'PASSWORD';
     
     if($ip){
         $query = 'https://'.$ip.':2087'.$query;
